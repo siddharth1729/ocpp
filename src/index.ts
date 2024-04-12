@@ -9,5 +9,3 @@ const server = new WebSocketServer(SERVER_PORT);
 // Start the WebSocket server
 server.start();
 
-// Log server startup message
-Logger.log(LogLevel.INFO, 'This is a custom log message');
