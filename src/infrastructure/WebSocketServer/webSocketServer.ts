@@ -22,7 +22,7 @@ export class WebSocketServer {
      * The `handleMessage` method is called whenever a client sends a message, and a message is logged when a client disconnects.
      */
     start(): void {
-        Logger.info(`WebSocket server started on port ${this.port}`); // Log server start with port info
+        Logger.info(`WebSocket server started on port http://localhost:${this.port}`); // Log server start with port info
 
         this.server.on('connection', (ws: WebSocket) => {
             Logger.info('Client connected.'); // Log client connection
