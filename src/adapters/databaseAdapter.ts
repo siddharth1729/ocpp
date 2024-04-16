@@ -2,19 +2,24 @@
 import { Connection, createConnection } from 'typeorm';
 
 export class DatabaseAdapter {
-  private connection: Connection;
+    private connection: Connection | null = null;
 
-  async connect(): Promise<void> {
-    this.connection = await createConnection(/* Database connection options */);
-  }
 
-  async disconnect(): Promise<void> {
-    await this.connection.close();
-  }
+    async connect(): Promise<void> {
+        this.connection = await createConnection(/* Database connection options */);
+    }
 
-  async saveData(data: any): Promise<void> {
-    await this.connection.getRepository('DataEntity').save(data);
-  }
+    async disconnect(): Promise<void> {
+        if (this.connection) {
+            await this.connection.close();
+        }
+    }
 
-  // Other database-related methods
+    async saveData(data: any): Promise<void> {
+        if (this.connection) {
+            await this.connection.getRepository('DataEntity').save(data);
+        }
+    }
+
+    // Other database-related methods
 }
