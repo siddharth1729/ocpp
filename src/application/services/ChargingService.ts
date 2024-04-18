@@ -1,6 +1,6 @@
 // domain/services/ChargingService.ts
-import { ChargePoint } from '../entities/ChargePoint';
-import { ChargePointRepository } from '../repositories/ChargePointRepository';
+import { ChargePoint } from '../../domain/entities/ChargePoint';
+import { ChargePointRepository } from '../../domain/repositories/ChargePointRepository';
 
 export class ChargingService {
   constructor(private chargePointRepository: ChargePointRepository) {}

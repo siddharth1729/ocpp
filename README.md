@@ -5,6 +5,9 @@ This project implements an OCPP (Open Charge Point Protocol) WebSocket server in
 
 EV charging stations compatible with OCPP 2.6 over WebSocket
 
+Note: This project is an aim to write and efficent ocpp server, and in order to do that the resureces which i have reffered are 
+    [Websocket performance analysis](https://github.com/siddharth1729/collection_of_research_papers/blob/main/src/performance_of_websocket_in_diffrent_language.pdf)
+
 ### Installation
 
 Clone the repository to your local machine:

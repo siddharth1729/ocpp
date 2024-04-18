@@ -1,5 +1,5 @@
 // application/useCases/ChargingUseCase.ts
-import { ChargingService } from '../../domain/services/ChargingService';
+import { ChargingService } from '../services/ChargingService';
 
 export class ChargingUseCase {
     constructor(private chargingService: ChargingService) { }
